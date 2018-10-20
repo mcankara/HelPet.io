@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "944546329699",
+    "firebase_url": "https://helpet-55778.firebaseio.com",
+    "project_id": "helpet-55778",
+    "storage_bucket": "helpet-55778.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944546329699:android:877295d44257ed0d",
+        "android_client_info": {
+          "package_name": "com.senior.helpet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944546329699-mdpci8eod5t94ratadu70ft7p48i1in4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.senior.helpet",
+            "certificate_hash": "d1cc63373bcbf3dce21a84f688f2eaf1e7febf24"
+          }
+        },
+        {
+          "client_id": "944546329699-2bqqr0jog1ph3jutlb11j962j93as9uk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqZmd_M9TnfUzYnA74ZIHmAVUbGdKuEo0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944546329699-2bqqr0jog1ph3jutlb11j962j93as9uk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
