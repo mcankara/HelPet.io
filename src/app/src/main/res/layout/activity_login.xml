@@ -9,24 +9,26 @@
 
     <ImageView
         android:id="@+id/reg_logo"
-        android:layout_width="146dp"
-        android:layout_height="118dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="155dp"
+        android:layout_height="110dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
         android:contentDescription="@string/login_logo_desc"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/hakan" />
 
     <EditText
         android:id="@+id/reg_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/login_username"
         android:ems="10"
         android:hint="@string/email_hint"
         android:inputType="textEmailAddress"
@@ -38,11 +40,12 @@
 
     <EditText
         android:id="@+id/reg_confirm_pass"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/login_password"
         android:ems="10"
         android:hint="@string/pass_hint"
         android:inputType="textPassword"
@@ -54,16 +57,14 @@
 
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="0dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@color/colorPrimary"
-        android:paddingBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/login_signin_bg"
         android:paddingTop="20dp"
-        android:text="@string/login_btn_text"
-        android:textAllCaps="@bool/text_all_caps"
+        android:paddingBottom="20dp"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,22 +73,23 @@
 
     <Button
         android:id="@+id/login_reg_btn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="225dp"
+        android:layout_height="21dp"
         android:layout_marginStart="8dp"
-        android:background="@color/colorAccent"
-        android:paddingBottom="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/login_donthaveacc"
         android:paddingTop="20dp"
-        android:text="@string/login_reg_btn_text"
+        android:paddingBottom="20dp"
         android:textAllCaps="@bool/text_all_caps"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_emergency_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/login_google" />
 
     <ProgressBar
         android:id="@+id/login_progress"
@@ -102,15 +104,53 @@
 
     <Button
         android:id="@+id/login_emergency_btn"
-        android:layout_width="0dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@color/firebrick"
-        android:text="EMERGENCY"
-        android:textColor="@color/aliceblue"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/login_emergency_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_or" />
+
+    <TextView
+        android:id="@+id/login_forgotpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Forgot Password?"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_btn" />
+
+    <TextView
+        android:id="@+id/login_or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="OR"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_forgotpassword" />
+
+    <Button
+        android:id="@+id/login_google"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/login_google_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_emergency_btn" />
+
 </android.support.constraint.ConstraintLayout>

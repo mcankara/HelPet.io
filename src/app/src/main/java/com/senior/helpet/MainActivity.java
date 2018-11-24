@@ -83,9 +83,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 logOut();
                 return true;
             case R.id.action_setting_btn:
-                Intent setupIntent = new Intent(MainActivity.this, SetupActivity.class);
-                startActivity(setupIntent);
-                finish();
+
                 return true;
             default:
                 return false;

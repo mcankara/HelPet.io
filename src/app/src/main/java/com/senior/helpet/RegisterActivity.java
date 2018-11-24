@@ -65,8 +65,8 @@ public class RegisterActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()) {
-                                    Intent setupIntent = new Intent(RegisterActivity.this, SetupActivity.class);
-                                    startActivity(setupIntent);
+                                    Intent mainIntent = new Intent(RegisterActivity.this, MainActivity.class);
+                                    startActivity(mainIntent);
                                     finish();
                                 } else {
                                     String errorMessage = task.getException().getMessage();
