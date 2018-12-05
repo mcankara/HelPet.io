@@ -53,20 +53,57 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reg_password" />
 
+    <EditText
+        android:id="@+id/reg_name"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/reg_confirm_password"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:padding="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_confirm_pass" />
+
+    <EditText
+        android:id="@+id/reg_surname"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/reg_confirm_password"
+        android:ems="10"
+        android:hint="@string/surname"
+        android:inputType="text"
+        android:padding="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_name" />
+
     <Button
         android:id="@+id/reg_btn"
         android:layout_width="290dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/reg_regbtn"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
         android:textAllCaps="@bool/text_all_caps"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reg_confirm_pass" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_surname" />
 
     <Button
         android:id="@+id/reg_login_btn"

@@ -18,9 +18,10 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private Toolbar mainToolbar;
     private FirebaseAuth mAuth;
 
     private DrawerLayout drawer;
@@ -32,9 +33,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mAuth = FirebaseAuth.getInstance();
 
-        mainToolbar = findViewById(R.id.toolbar);
+        Toolbar mainToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mainToolbar);
-        getSupportActionBar().setTitle("HelPet");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("HelPet");
 
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -102,8 +103,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void onPPClick(View v) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProfileFragment()).commit();
+        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProfileFragment()).commit();
         drawer.closeDrawer(GravityCompat.START);
+    }
+
+    public void onAddPetToProfileClick(View v) {
+        Intent loginIntent = new Intent(MainActivity.this, AddPetToProfileActivity.class);
+        startActivity(loginIntent);
+        finish();
     }
 
     @Override
