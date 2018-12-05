@@ -102,6 +102,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void writeNewUser(String userId, String name, String surname, String email, ArrayList<Pet> pets) {
         User user = new User(userId, name, surname, email, pets);
+        Toast.makeText(RegisterActivity.this, userId, Toast.LENGTH_LONG).show();
         mDatabase.child("users").child(userId).setValue(user);
     }
 
