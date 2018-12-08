@@ -112,9 +112,6 @@
                     android:focusable="true"
                     android:onClick="onAddPetToProfileClick"/>
             </RelativeLayout>
-
-
-
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

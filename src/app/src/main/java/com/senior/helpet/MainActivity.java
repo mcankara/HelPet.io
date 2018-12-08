@@ -133,9 +133,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LookafterFragment()).commit();
                 break;
             case R.id.nav_lost:
-                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LostpetFragment()).commit();
-                startActivity(new Intent(MainActivity.this, LostpetFragment.class));
-                //finish();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LostpetFragment()).commit();
                 break;
             case R.id.nav_mating:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MatingFragment()).commit();
